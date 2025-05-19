@@ -1,0 +1,440 @@
+/* StayPredictorOps - Hotel Reservation Prediction System Stylesheet */
+/* Created May 19, 2025 */
+
+/* ===== GLOBAL STYLES ===== */
+:root {
+    /* Primary Colors */
+    --royal-blue: #4169E1;
+    --teal: #008080;
+    --goldenrod: #DAA520;
+    
+    /* Accent Colors */
+    --coral: #FF6F61;
+    --mint-green: #98FF98;
+    --lavender: #B57EDC;
+    
+    /* Neutrals */
+    --dark-slate-gray: #2F4F4F;
+    --light-gray: #F5F5F5;
+    --white-smoke: #F8F8F8;
+    
+    /* Gradients */
+    --blue-teal-gradient: linear-gradient(135deg, #4169E1, #008080);
+    --golden-coral-gradient: linear-gradient(135deg, #DAA520, #FF6F61);
+    --lavender-mint-gradient: linear-gradient(135deg, #B57EDC, #98FF98);
+    --professional-bg-gradient: linear-gradient(to bottom right, #F5F5F5, #E0E0E0);
+    
+    /* Typography */
+    --main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --heading-font: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: var(--main-font);
+    background: var(--professional-bg-gradient);
+    color: var(--dark-slate-gray);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: var(--white-smoke);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.8s ease-in;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: var(--blue-teal-gradient);
+    animation: shimmer 3s infinite linear;
+}
+
+/* ===== HEADINGS ===== */
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+    animation: slideDown 0.5s ease-out;
+}
+
+h1 {
+    font-size: 32px;
+    color: var(--royal-blue);
+    text-align: center;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--golden-coral-gradient);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+h2 {
+    font-size: 24px;
+    color: var(--teal);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 25px;
+    padding-bottom: 8px;
+    color: var(--goldenrod);
+    border-bottom: 2px solid var(--light-gray);
+}
+
+h4 {
+    font-size: 16px;
+    color: var(--royal-blue);
+}
+
+p {
+    margin-bottom: 15px;
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* ===== FORM ELEMENTS ===== */
+form {
+    margin-top: 25px;
+    animation: fadeIn 1s ease-in;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+    animation: slideUp 0.5s ease-out;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--dark-slate-gray);
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--light-gray);
+    border-radius: 8px;
+    font-size: 16px;
+    color: var(--dark-slate-gray);
+    background-color: white;
+    transition: all 0.3s;
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: var(--royal-blue);
+    box-shadow: 0 0 0 3px rgba(65, 105, 225, 0.2);
+    outline: none;
+}
+
+select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%232F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 8px;
+    background: var(--blue-teal-gradient);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform 0.6s, opacity 0.6s;
+}
+
+button:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* ===== PREDICTION RESULTS ===== */
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    animation: pulse 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.result h3 {
+    margin-top: 0;
+    border-bottom: none;
+}
+
+.result p {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.result p strong {
+    font-weight: 700;
+}
+
+/* Style for successful prediction */
+.result:has(p:nth-child(2):contains("keep")) {
+    background: linear-gradient(to right, rgba(152, 255, 152, 0.2), rgba(65, 105, 225, 0.1));
+    border-left: 5px solid var(--mint-green);
+}
+
+/* Style for cancellation prediction */
+.result:has(p:nth-child(2):contains("cancel")) {
+    background: linear-gradient(to right, rgba(255, 111, 97, 0.1), rgba(218, 165, 32, 0.1));
+    border-left: 5px solid var(--coral);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--light-gray);
+    text-align: center;
+    font-size: 14px;
+    color: var(--dark-slate-gray);
+    opacity: 0.9;
+    animation: fadeIn 1s ease-in;
+}
+
+.footer h4 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin-bottom: 8px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(65, 105, 225, 0.5); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(65, 105, 225, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(65, 105, 225, 0); }
+}
+
+@keyframes shimmer {
+    0% { background-position: -468px 0; }
+    100% { background-position: 468px 0; }
+}
+
+/* Hover effects for form elements */
+.form-group:hover label {
+    color: var(--royal-blue);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    /* Two-column layout for form groups on PC */
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    /* Section headers span full width */
+    form h3 {
+        width: 100%;
+    }
+
+    /* Form groups take up just under half width with space between */
+    .form-group {
+        width: 48%;
+    }
+
+    /* But sections with only one input should be full width */
+    h3 + .form-group:only-of-type,  /* If there's only one form-group after an h3 */
+    .form-group:only-child {        /* Or if there's only one form-group in a section */
+        width: 100%;
+    }
+
+    /* Button remains full width */
+    button {
+        width: 100%;
+    }
+}
+
+/* Extra animations for hover effects */
+.form-group label:hover {
+    transform: translateX(5px);
+}
+
+input, select {
+    position: relative;
+}
+
+input:focus::after, select:focus::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--lavender-mint-gradient);
+    animation: slideRight 0.3s ease-out forwards;
+}
+
+@keyframes slideRight {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Emoji pulsing animation */
+h1:first-letter, h2:first-letter, h3:first-letter, label:first-letter {
+    display: inline-block;
+    animation: subtle-pulse 2s infinite;
+}
+
+@keyframes subtle-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Elegant form section transitions */
+h3 {
+    position: relative;
+    overflow: hidden;
+}
+
+h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--lavender-mint-gradient);
+    transform: translateX(-100%);
+    animation: slideIn 0.6s forwards 0.2s;
+}
+
+@keyframes slideIn {
+    to { transform: translateX(0); }
+}
+
+/* Button text animation */
+button span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Custom styling for date inputs to make them more interactive */
+select option {
+    padding: 10px;
+}
+
+/* Add subtle animation to the prediction result */
+.result {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Fancy hover effect for the container */
+.container:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}

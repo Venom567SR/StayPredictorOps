@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial=scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>StayPredictorOps: HOTEL RESERVATION PREDICTION SYSTEM✨🏨✨</title>
+</head>
+
+<body>
+<div class="container">
+    <h1>📆 StayPredictorOps 🛎️</h1>
+    <h2>🏨 Hotel Reservation Prediction 🏨</h2>
+    <p>✅ Use this tool to predict if a customer will cancel their hotel reservation</p>
+
+    <form method="POST">
+        <h3>📆 Booking Timeline Information</h3>
+        <div class="form-group">
+            <label for="lead_time">⏱️ Lead Time (days before arrival)</label>
+            <input type="number" id="lead_time" name="lead_time" required>
+        </div>
+
+        <h3>🛎️ Special Requests & Room Details</h3>
+        <div class="form-group">
+            <label for="no_of_special_request">🎯 Number of Special Requests</label>
+            <input type="number" id="no_of_special_request" name="no_of_special_request" required>
+        </div>
+
+        <div class="form-group">
+            <label for="avg_price_per_room">💰 Average Price Per Room</label>
+            <input type="number" id="avg_price_per_room" name="avg_price_per_room" required>
+        </div>
+
+        <h3>📅 Arrival Information</h3>
+        <div class="form-group">
+            <label for="arrival_month">📆 Arrival Month</label>
+            <select id="arrival_month" name="arrival_month" required>
+                <option value="1">January ❄️</option>
+                <option value="2">February 💘</option>
+                <option value="3">March 🌱</option>
+                <option value="4">April 🌧️</option>
+                <option value="5">May 🌷</option>
+                <option value="6">June ☀️</option>
+                <option value="7">July 🏖️</option>
+                <option value="8">August 🔥</option>
+                <option value="9">September 🍂</option>
+                <option value="10">October 🎃</option>
+                <option value="11">November 🍁</option>
+                <option value="12">December 🎄</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="arrival_date">📅 Arrival Date</label>
+            <select id="arrival_date" name="arrival_date" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+        </div>
+
+        <h3>💼 Booking Details</h3>
+        <div class="form-group">
+            <label for="market_segment_type">🏢 Market Segment Type</label>
+            <select id="market_segment_type" name="market_segment_type" required>
+                <option value="0">✈️ Aviation</option>
+                <option value="1">🎁 Complimentary</option>
+                <option value="2">👔 Corporate</option>
+                <option value="3">📞 Offline</option>
+                <option value="4">💻 Online</option>
+            </select>
+        </div>
+
+        <h3>🗓️ Length of Stay</h3>
+        <div class="form-group">
+            <label for="no_of_week_nights">🌙 Number of Week Nights</label>
+            <input type="number" id="no_of_week_nights" name="no_of_week_nights" required>
+        </div>
+
+        <div class="form-group">
+            <label for="no_of_weekend_nights">🌞 Number of Weekend Nights</label>
+            <input type="number" id="no_of_weekend_nights" name="no_of_weekend_nights" required>
+        </div>
+
+        <h3>🍽️ Meal & Room Preferences</h3>
+        <div class="form-group">
+            <label for="type_of_meal_plan">🍳 Type of Meal Plan</label>
+            <select id="type_of_meal_plan" name="type_of_meal_plan" required>
+                <option value="0">🥐 Meal Plan 1 (Breakfast)</option>
+                <option value="1">🍲 Meal Plan 2 (Half Board)</option>
+                <option value="2">🍱 Meal Plan 3 (Full Board)</option>
+                <option value="3">❌ Not Selected</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="room_type_reserved">🛏️ Room Type Reserved</label>
+            <select id="room_type_reserved" name="room_type_reserved" required>
+                <option value="0">🌟 Room Type 1 (Standard)</option>
+                <option value="1">🌟🌟 Room Type 2 (Deluxe)</option>
+                <option value="2">🌟🌟🌟 Room Type 3 (Executive)</option>
+                <option value="3">🌟🌟🌟🌟 Room Type 4 (Suite)</option>
+                <option value="4">🏆 Room Type 5 (Presidential)</option>
+                <option value="5">👨‍👩‍👧‍👦 Room Type 6 (Family)</option>
+                <option value="6">🌴 Room Type 7 (Villa)</option>
+            </select>
+        </div>
+
+        <button type="submit">🔮 Predict Reservation Status</button>
+    </form>
+
+    {% if prediction is not none %}
+    <div class="result">
+        <h3>🔍 Prediction Results</h3>
+        {% if prediction == 0 %}
+        <p>⚠️ The customer is likely to <strong>cancel</strong> their reservation! 📝</p>
+        <p>📊 You may want to consider overbooking or special offers to secure this booking.</p>
+        {% elif prediction == 1 %}
+        <p>✅ Good news! The customer is likely to <strong>keep</strong> their reservation! 🎉</p>
+        <p>👍 This booking appears stable and can be relied upon.</p>
+        {% endif %}
+    </div>
+    {% endif %}
+    
+    <div class="footer">
+        <h4>📊 Prediction Model Information</h4>
+        <p>🧠 This prediction uses machine learning based on historical booking patterns</p>
+        <p>⚙️ Accuracy: Our model has been trained on thousands of past reservations</p>
+    </div>
+</div>
+
+</body>
+</html>
