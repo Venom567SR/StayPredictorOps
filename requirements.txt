@@ -7,7 +7,7 @@ matplotlib
 seaborn
 statsmodels
 imbalanced-learn
-xgboost
 lightgbm
+xgboost
 mlflow
 flask
